@@ -4,7 +4,7 @@ Test the calculator library
 import pytest
 from main import Calculator
 
-pytest.mark.parametrize("a, b, result", [(2, 2, 4), (3, 3, 6), (4, 4, 8)])
+@pytest.mark.parametrize("a, b, result", [(2, 2, 4), (3, 3, 6), (4, 4, 8)])
 def test_add(a, b, result):
     calc = Calculator()
     assert calc.add(a, b) == result
